@@ -1,0 +1,19 @@
+{
+  "name": "acrylic-lamp",
+  "version": "0.0.1",
+  "description": "All scripting stuff needed to create the acrylic-lamp",
+  "main": "index.js",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/usr/local/share/GITs/mbaaba.GITs/acrylic-lamp"
+  },
+  "author": "Wolfgang Egger (framlin)",
+  "license": "ISC"
+}
