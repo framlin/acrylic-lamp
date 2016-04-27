@@ -4,7 +4,7 @@
 #endif
 
 #define PIN 6
-#define PIXEL_COUNT 8
+#define PIXEL_COUNT 20
 
 #define COLOR_1  strip.Color(255, 255, 0)
 #define COLOR_2  strip.Color(255, 0, 255)
@@ -31,11 +31,19 @@ const int FADE_SPEED = 6;
 //   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
 //   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
 //   NEO_RGBW    Pixels are wired for RGBW bitstream (NeoPixel RGBW products)
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIN, NEO_RGBW + NEO_KHZ800);
 
 
-uint32_t colorMix[8] = {COLOR_1, COLOR_2, COLOR_4, COLOR_4, COLOR_5, COLOR_6, COLOR_7, COLOR_8};
-uint32_t colorBuffer[8];
+uint32_t colorMix[20] = {
+		COLOR_1, COLOR_1,
+		COLOR_2, COLOR_2, COLOR_2,
+		COLOR_3, COLOR_3, COLOR_3,
+		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
+		COLOR_5, COLOR_5, COLOR_5,
+		COLOR_6, COLOR_6, COLOR_6,
+		COLOR_7, COLOR_7};
+
+uint32_t colorBuffer[20];
 
 
 
@@ -65,21 +73,7 @@ void mixedColor(uint32_t *color) {
 	  uint32_t mixedColor = 0;
 
 	  for (uint16_t i=0; i<strip.numPixels(); i++) {
-/*
-	    lastColor = strip.getPixelColor(i);
-	    mixedColor = lastColor | color[i];
-	    strip.setPixelColor(i, mixedColor);
-	    strip.show();
-	    delay(10);
-*/
-		  /*
-	    strip.setPixelColor(i, color[i]);
-	    strip.show();
-	    //delay(10);
-	     */
-
 		  fade_to_color(&strip, i, color[i]);
-
 	  }
 
 }
