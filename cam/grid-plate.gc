@@ -1,0 +1,89 @@
+;[PREFACE]
+G40 (disable tool radius compensation)
+G49 (disable tool length compensation)
+G80 (cancel modal motion)
+G90 (disable incremental moves)
+G21 (metric)
+G61 (exact path mode)
+;[horizontal lines]
+F800
+G0 Z10
+ X0 
+ Y21.43
+G1 Z-2
+ X150 
+ Y21.43
+G0 Z10
+ X150 
+ Y42.86
+G1 Z-2
+ X0 
+ Y42.86
+G0 Z10
+ X0 
+ Y64.29
+G1 Z-2
+ X150 
+ Y64.29
+G0 Z10
+ X150 
+ Y85.71
+G1 Z-2
+ X0 
+ Y85.71
+G0 Z10
+ X0 
+ Y107.14
+G1 Z-2
+ X150 
+ Y107.14
+G0 Z10
+ X150 
+ Y128.57
+G1 Z-2
+ X0 
+ Y128.57
+G0 Z10
+ X0 
+ Y0
+;[vertical lines]
+G0 Z10
+ Y0 
+ X21.43
+G1 Z-2
+ Y150 
+ X21.43
+G0 Z10
+ Y150 
+ X42.86
+G1 Z-2
+ Y0 
+ X42.86
+G0 Z10
+ Y0 
+ X64.29
+G1 Z-2
+ Y150 
+ X64.29
+G0 Z10
+ Y150 
+ X85.71
+G1 Z-2
+ Y0 
+ X85.71
+G0 Z10
+ Y0 
+ X107.14
+G1 Z-2
+ Y150 
+ X107.14
+G0 Z10
+ Y150 
+ X128.57
+G1 Z-2
+ Y0 
+ X128.57
+G0 Z10
+ Y0 
+ X0
+

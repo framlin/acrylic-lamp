@@ -4,7 +4,6 @@
 #endif
 
 #define PIN 6
-#define PIXEL_COUNT 20
 
 #define COLOR_1  strip.Color(255, 255, 0)
 #define COLOR_2  strip.Color(255, 0, 255)
@@ -20,7 +19,8 @@
 #define C_WHITE Adafruit_NeoPixel::Color(255, 255, 255)
 #define C_BLUE Adafruit_NeoPixel::Color(0, 0, 255)
 
-const int FADE_SPEED = 6;
+const int FADE_SPEED = 2;
+const int PIXEL_COUNT = 140;
 
 
 // Parameter 1 = number of pixels in strip
@@ -34,16 +34,65 @@ const int FADE_SPEED = 6;
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIN, NEO_RGBW + NEO_KHZ800);
 
 
-uint32_t colorMix[20] = {
+uint32_t colorMix[PIXEL_COUNT] = {
 		COLOR_1, COLOR_1,
 		COLOR_2, COLOR_2, COLOR_2,
 		COLOR_3, COLOR_3, COLOR_3,
 		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
 		COLOR_5, COLOR_5, COLOR_5,
 		COLOR_6, COLOR_6, COLOR_6,
-		COLOR_7, COLOR_7};
+		COLOR_7, COLOR_7,
 
-uint32_t colorBuffer[20];
+		COLOR_1, COLOR_1,
+		COLOR_2, COLOR_2, COLOR_2,
+		COLOR_3, COLOR_3, COLOR_3,
+		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
+		COLOR_5, COLOR_5, COLOR_5,
+		COLOR_6, COLOR_6, COLOR_6,
+		COLOR_7, COLOR_7,
+
+		COLOR_1, COLOR_1,
+		COLOR_2, COLOR_2, COLOR_2,
+		COLOR_3, COLOR_3, COLOR_3,
+		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
+		COLOR_5, COLOR_5, COLOR_5,
+		COLOR_6, COLOR_6, COLOR_6,
+		COLOR_7, COLOR_7,
+
+		COLOR_1, COLOR_1,
+		COLOR_2, COLOR_2, COLOR_2,
+		COLOR_3, COLOR_3, COLOR_3,
+		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
+		COLOR_5, COLOR_5, COLOR_5,
+		COLOR_6, COLOR_6, COLOR_6,
+		COLOR_7, COLOR_7,
+
+		COLOR_1, COLOR_1,
+		COLOR_2, COLOR_2, COLOR_2,
+		COLOR_3, COLOR_3, COLOR_3,
+		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
+		COLOR_5, COLOR_5, COLOR_5,
+		COLOR_6, COLOR_6, COLOR_6,
+		COLOR_7, COLOR_7,
+
+		COLOR_1, COLOR_1,
+		COLOR_2, COLOR_2, COLOR_2,
+		COLOR_3, COLOR_3, COLOR_3,
+		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
+		COLOR_5, COLOR_5, COLOR_5,
+		COLOR_6, COLOR_6, COLOR_6,
+		COLOR_7, COLOR_7,
+
+		COLOR_1, COLOR_1,
+		COLOR_2, COLOR_2, COLOR_2,
+		COLOR_3, COLOR_3, COLOR_3,
+		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
+		COLOR_5, COLOR_5, COLOR_5,
+		COLOR_6, COLOR_6, COLOR_6,
+		COLOR_7, COLOR_7
+};
+
+uint32_t colorBuffer[PIXEL_COUNT];
 
 
 
