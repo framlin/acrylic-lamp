@@ -5,21 +5,20 @@
 
 #define PIN 6
 
-#define COLOR_1  strip.Color(255, 255, 0)
-#define COLOR_2  strip.Color(255, 0, 255)
-#define COLOR_3  strip.Color(0, 0, 255)
-#define COLOR_4  strip.Color(255, 0, 0)
-#define COLOR_5  strip.Color(0, 255, 0)
-#define COLOR_6  strip.Color(0, 255, 255)
-#define COLOR_7  strip.Color(255, 255, 255)
-#define COLOR_8  strip.Color(255, 128, 64)
+#define COLOR_1  strip.Color(255, 255, 0, 255)
+#define COLOR_2  strip.Color(255, 0, 255, 255)
+#define COLOR_3  strip.Color(0, 0, 255, 255)
+#define COLOR_4  strip.Color(255, 0, 0, 255)
+#define COLOR_5  strip.Color(0, 255, 0, 255)
+#define COLOR_6  strip.Color(0, 255, 255, 255)
+#define COLOR_7  strip.Color(255, 255, 255, 255)
 
 #define C_RED Adafruit_NeoPixel::Color(255, 0, 0)
 #define C_YELLOW Adafruit_NeoPixel::Color(255, 255, 0)
 #define C_WHITE Adafruit_NeoPixel::Color(255, 255, 255)
 #define C_BLUE Adafruit_NeoPixel::Color(0, 0, 255)
 
-const int FADE_SPEED = 2;
+const int FADE_SPEED = 1;
 const int PIXEL_COUNT = 140;
 
 
@@ -36,59 +35,59 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXEL_COUNT, PIN, NEO_RGBW + NEO_KHZ
 
 uint32_t colorMix[PIXEL_COUNT] = {
 		COLOR_1, COLOR_1,
-		COLOR_2, COLOR_2, COLOR_2,
-		COLOR_3, COLOR_3, COLOR_3,
-		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
-		COLOR_5, COLOR_5, COLOR_5,
-		COLOR_6, COLOR_6, COLOR_6,
-		COLOR_7, COLOR_7,
-
+		COLOR_1, COLOR_1, COLOR_1,
+		COLOR_1, COLOR_1, COLOR_1,
+		COLOR_1, COLOR_1, COLOR_1, COLOR_1,
+		COLOR_1, COLOR_1, COLOR_1,
+		COLOR_1, COLOR_1, COLOR_1,
 		COLOR_1, COLOR_1,
-		COLOR_2, COLOR_2, COLOR_2,
-		COLOR_3, COLOR_3, COLOR_3,
-		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
-		COLOR_5, COLOR_5, COLOR_5,
-		COLOR_6, COLOR_6, COLOR_6,
-		COLOR_7, COLOR_7,
 
-		COLOR_1, COLOR_1,
+		COLOR_2, COLOR_2,
 		COLOR_2, COLOR_2, COLOR_2,
-		COLOR_3, COLOR_3, COLOR_3,
-		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
-		COLOR_5, COLOR_5, COLOR_5,
-		COLOR_6, COLOR_6, COLOR_6,
-		COLOR_7, COLOR_7,
+		COLOR_2, COLOR_2, COLOR_2,
+		COLOR_2, COLOR_2, COLOR_2, COLOR_2,
+		COLOR_2, COLOR_2, COLOR_2,
+		COLOR_2, COLOR_2, COLOR_2,
+		COLOR_2, COLOR_2,
 
-		COLOR_1, COLOR_1,
-		COLOR_2, COLOR_2, COLOR_2,
+		COLOR_3, COLOR_3,
 		COLOR_3, COLOR_3, COLOR_3,
-		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
-		COLOR_5, COLOR_5, COLOR_5,
-		COLOR_6, COLOR_6, COLOR_6,
-		COLOR_7, COLOR_7,
+		COLOR_3, COLOR_3, COLOR_3,
+		COLOR_3, COLOR_3, COLOR_3, COLOR_3,
+		COLOR_3, COLOR_3, COLOR_3,
+		COLOR_3, COLOR_3, COLOR_3,
+		COLOR_3, COLOR_3,
 
-		COLOR_1, COLOR_1,
-		COLOR_2, COLOR_2, COLOR_2,
-		COLOR_3, COLOR_3, COLOR_3,
+		COLOR_4, COLOR_4,
+		COLOR_4, COLOR_4, COLOR_4,
+		COLOR_4, COLOR_4, COLOR_4,
 		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
-		COLOR_5, COLOR_5, COLOR_5,
-		COLOR_6, COLOR_6, COLOR_6,
-		COLOR_7, COLOR_7,
+		COLOR_4, COLOR_4, COLOR_4,
+		COLOR_4, COLOR_4, COLOR_4,
+		COLOR_4, COLOR_4,
 
-		COLOR_1, COLOR_1,
-		COLOR_2, COLOR_2, COLOR_2,
-		COLOR_3, COLOR_3, COLOR_3,
-		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
+		COLOR_5, COLOR_5,
 		COLOR_5, COLOR_5, COLOR_5,
-		COLOR_6, COLOR_6, COLOR_6,
-		COLOR_7, COLOR_7,
+		COLOR_5, COLOR_5, COLOR_5,
+		COLOR_5, COLOR_5, COLOR_5, COLOR_5,
+		COLOR_5, COLOR_5, COLOR_5,
+		COLOR_5, COLOR_5, COLOR_5,
+		COLOR_5, COLOR_5,
 
-		COLOR_1, COLOR_1,
-		COLOR_2, COLOR_2, COLOR_2,
-		COLOR_3, COLOR_3, COLOR_3,
-		COLOR_4, COLOR_4, COLOR_4, COLOR_4,
-		COLOR_5, COLOR_5, COLOR_5,
+		COLOR_6, COLOR_6,
 		COLOR_6, COLOR_6, COLOR_6,
+		COLOR_6, COLOR_6, COLOR_6,
+		COLOR_6, COLOR_6, COLOR_6, COLOR_6,
+		COLOR_6, COLOR_6, COLOR_6,
+		COLOR_6, COLOR_6, COLOR_6,
+		COLOR_6, COLOR_6,
+
+		COLOR_7, COLOR_7,
+		COLOR_7, COLOR_7, COLOR_7,
+		COLOR_7, COLOR_7, COLOR_7,
+		COLOR_7, COLOR_7, COLOR_7, COLOR_7,
+		COLOR_7, COLOR_7, COLOR_7,
+		COLOR_7, COLOR_7, COLOR_7,
 		COLOR_7, COLOR_7
 };
 
@@ -215,7 +214,7 @@ void fade_pixel(Adafruit_NeoPixel *pxls, int num, uint8_t rf, uint8_t gf, uint8_
                 b = b + incb*1;
                 bgap = bt - b;
             }
-            show_pixel(pxls, num, pxls->Color(r, g, b));
+            show_pixel(pxls, num, pxls->Color(r, g, b, 255));
             delay(FADE_SPEED);
         }
 }
