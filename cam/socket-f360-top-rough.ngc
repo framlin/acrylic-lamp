@@ -1,0 +1,186 @@
+;PYCAM-META-DATA: Filename: /home/framlin/tinker/acrylic-lamp/cad/socket-f360-top.stl
+;PYCAM-META-DATA: Timestamp: 2016-05-20 20:10:52.081382
+;PYCAM-META-DATA: Version: 0.5.1
+;Estimated machine time: 21 minutes
+G40 (disable tool radius compensation)
+G49 (disable tool length compensation)
+G80 (cancel modal motion)
+G54 (select coordinate system 1)
+G90 (disable incremental moves)
+G21 (metric)
+G61 (exact path mode)
+F400.00000
+S1000.00000
+;PYCAM_TOOLPATH_SETTINGS: START
+;[Bounds]
+;maxz = 0.0
+;maxx = 248.4125
+;maxy = 133.4125
+;minx = 1.5875
+;miny = 1.5875
+;minz = -19.0
+;
+;[Tool]
+;torus_radius = 0.125
+;speed = 1000.0
+;shape = SphericalCutter
+;tool_radius = 1.5875
+;feedrate = 400.0
+;
+;[Process]
+;engrave_offset = 0.0
+;step_down = 2.0
+;generator = PushCutter
+;postprocessor = SimpleCutter
+;milling_style = ignore
+;material_allowance = 0.5
+;pocketing_type = none
+;path_direction = x
+;
+;PYCAM_TOOLPATH_SETTINGS: END
+T4 M6
+G0 Z25.0000
+M3 (start spindle)
+G04 P3 (wait for 3 seconds)
+ X199.8677 Y23.5583
+G1 Z0.0000
+ X50.5787
+G0 Z25.0000
+ X199.6964 Y36.1131
+G1 Z0.0000
+ X50.4075
+G0 Z25.0000
+ Y51.8065
+G1 Z0.0000
+ X199.6964
+G0 Z25.0000
+ Y67.5000
+G1 Z0.0000
+ X50.4075
+G0 Z25.0000
+ Y83.1935
+G1 Z0.0000
+ X199.6964
+G0 Z25.0000
+ X50.4075 Y95.7482
+G1 Z0.0000
+ X199.6964
+ Y98.8869
+ X50.4075
+G0 Z25.0000
+ X199.6964 Y111.4417
+G1 Z0.0000
+ X50.4075
+G0 Z25.0000
+ X198.9645 Y83.1935
+G1 Z-1.9000
+ X51.1395
+G0 Z25.0000
+ Y67.5000
+G1 Z-1.9000
+ X198.9645
+G0 Z25.0000
+ Y51.8065
+G1 Z-1.9000
+ X51.1395
+ Z-3.8000
+ X198.9645
+G0 Z25.0000
+ Y67.5000
+G1 Z-3.8000
+ X51.1395
+G0 Z25.0000
+ Y83.1935
+G1 Z-3.8000
+ X198.9645
+ Z-5.7000
+ X51.1395
+G0 Z25.0000
+ Y67.5000
+G1 Z-5.7000
+ X198.9645
+G0 Z25.0000
+ Y51.8065
+G1 Z-5.7000
+ X51.1395
+G0 Z25.0000
+ X56.6904
+G1 Z-7.6000
+ X193.4136
+G0 Z25.0000
+ Y67.5000
+G1 Z-7.6000
+ X56.6904
+G0 Z25.0000
+ Y83.1935
+G1 Z-7.6000
+ X193.4136
+G0 Z25.0000
+ X191.9663
+G1 Z-9.5000
+ X58.1377
+G0 Z25.0000
+ Y67.5000
+G1 Z-9.5000
+ X191.9663
+G0 Z25.0000
+ Y51.8065
+G1 Z-9.5000
+ X58.1377
+G0 Z25.0000
+ X58.1395
+G1 Z-11.4000
+ X191.9645
+G0 Z25.0000
+ Y67.5000
+G1 Z-11.4000
+ X58.1395
+G0 Z25.0000
+ Y83.1935
+G1 Z-11.4000
+ X191.9645
+ Z-13.3000
+ X58.1395
+G0 Z25.0000
+ Y67.5000
+G1 Z-13.3000
+ X191.9645
+G0 Z25.0000
+ Y51.8065
+G1 Z-13.3000
+ X58.1395
+ Z-15.2000
+ X191.9645
+G0 Z25.0000
+ Y67.5000
+G1 Z-15.2000
+ X58.1395
+G0 Z25.0000
+ Y83.1935
+G1 Z-15.2000
+ X191.9645
+ Z-17.1000
+ X58.1395
+G0 Z25.0000
+ Y67.5000
+G1 Z-17.1000
+ X191.9645
+G0 Z25.0000
+ Y51.8065
+G1 Z-17.1000
+ X58.1395
+ Z-19.0000
+ X191.9645
+G0 Z25.0000
+ Y67.5000
+G1 Z-19.0000
+ X58.1395
+G0 Z25.0000
+ Y83.1935
+G1 Z-19.0000
+ X191.9645
+G0 Z25.0000
+M5 (stop spindle)
+G04 P3 (wait for 3 seconds)
+G0 Z25.0000
+M2 (end program)
